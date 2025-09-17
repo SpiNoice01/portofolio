@@ -20,7 +20,7 @@ export default function HeroSection() {
           
           {/* Hero Text */}
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 animate-fadeInUp" style={{animationDelay: '0.2s'}}>
-            Hi, I'm{" "}
+            Hi, I&apos;m{" "}
             <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               John Doe
             </span>

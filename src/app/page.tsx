@@ -13,7 +13,7 @@ export default function Home() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">About Me</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              I'm a passionate developer with 5+ years of experience creating digital solutions 
+              I&apos;m a passionate developer with 5+ years of experience creating digital solutions 
               that combine beautiful design with robust functionality.
             </p>
           </div>
@@ -150,9 +150,9 @@ export default function Home() {
       <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Let's Work Together</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Let&apos;s Work Together</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Have a project in mind? I'd love to hear about it. Let's create something amazing together.
+              Have a project in mind? I&apos;d love to hear about it. Let&apos;s create something amazing together.
             </p>
           </div>
           
