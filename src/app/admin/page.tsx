@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { usePortfolio } from "@/context/PortfolioContext";
 import HeroEditor from "@/components/admin/HeroEditor";
 import AboutEditor from "@/components/admin/AboutEditor";
@@ -12,7 +13,7 @@ type TabType = "hero" | "about" | "projects" | "contact" | "metadata";
 
 export default function AdminPage() {
   const [activeTab, setActiveTab] = useState<TabType>("hero");
-  const { portfolioData, saveToLocalStorage, resetToDefault } = usePortfolio();
+  const { saveToLocalStorage, resetToDefault } = usePortfolio();
   const [saved, setSaved] = useState(false);
 
   const handleSave = () => {
@@ -46,12 +47,12 @@ export default function AdminPage() {
               <p className="text-sm text-gray-400">Manage your portfolio content</p>
             </div>
             <div className="flex gap-3">
-              <a
+              <Link
                 href="/"
                 className="px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-lg transition-colors"
               >
                 View Site
-              </a>
+              </Link>
               <button
                 onClick={handleSave}
                 className="px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white rounded-lg transition-all font-semibold"
