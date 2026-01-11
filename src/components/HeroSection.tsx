@@ -1,4 +1,11 @@
+"use client";
+
+import { usePortfolio } from "@/context/PortfolioContext";
+
 export default function HeroSection() {
+  const { portfolioData } = usePortfolio();
+  const { hero } = portfolioData;
+
   return (
     <section id="home" className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       {/* Background decoration */}
@@ -13,7 +20,7 @@ export default function HeroSection() {
           <div className="mb-8 animate-fadeInUp">
             <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-r from-purple-400 to-pink-400 p-1 animate-float">
               <div className="w-full h-full rounded-full bg-gray-800 flex items-center justify-center">
-                <span className="text-4xl font-bold text-white">JD</span>
+                <span className="text-4xl font-bold text-white">{hero.initials}</span>
               </div>
             </div>
           </div>
@@ -22,12 +29,11 @@ export default function HeroSection() {
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 animate-fadeInUp" style={{animationDelay: '0.2s'}}>
             Hi, I&apos;m{" "}
             <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              John Doe
+              {hero.name}
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto animate-fadeInUp" style={{animationDelay: '0.4s'}}>
-            Full Stack Developer & UI/UX Designer passionate about creating beautiful, 
-            functional web experiences that make a difference.
+            {hero.description}
           </p>
           
           {/* CTA Buttons */}
